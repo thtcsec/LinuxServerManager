@@ -26,9 +26,8 @@ Trần Minh Thiện – 23DH113375
     ```
 
 3.  **Quyền hạn:**
-    Một số chức năng quản trị hệ thống (ví dụ: kết thúc tiến trình của người dùng khác, đọc một số file log hệ thống) yêu cầu quyền root. Do đó, bạn có thể cần chạy ứng dụng với `sudo`.
+    Một số chức năng quản trị hệ thống (ví dụ: kết thúc tiến trình của người dùng khác, đọc một số file log hệ thống) yêu cầu quyền root. Do đó, có thể cần chạy ứng dụng với `sudo`.
 
-    **Lưu ý quan trọng:** Chạy các ứng dụng GUI với `sudo` có thể tiềm ẩn rủi ro bảo mật. Hãy thận trọng và chỉ chạy khi cần thiết.
 
 ## 🏃 Cách Sử dụng
 
