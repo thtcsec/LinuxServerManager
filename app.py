@@ -105,8 +105,10 @@ class LinuxServerManager:
         Phiên bản: 1.0
 
         Ứng dụng quản trị cơ bản cho hệ điều hành Linux.
-        Được phát triển bằng Python và Tkinter.
-        Mã nguồn mở - Tác giả: [Tên của bạn]
+        Phát triển bằng Python và Tkinter.
+        Nhóm 21
+            - Trịnh Hoàng Tú – 23DH113972
+            - Trần Minh Thiện – 23DH113375
         """
         messagebox.showinfo("Về chúng tôi", about_text)
 
