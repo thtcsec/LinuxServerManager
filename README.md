@@ -1,4 +1,5 @@
-XÂY DỰNG ỨNG DỤNG QUẢN TRỊ CƠ BẢN CHO LINUX TRÊN MÃ NGUỒN MỞ
+ĐỀ TÀI: XÂY DỰNG ỨNG DỤNG QUẢN TRỊ CƠ BẢN CHO LINUX TRÊN MÃ NGUỒN MỞ
+
 Tên đồ án: Linux Server Manager
 
 Nhóm thực hiện: Nhóm 21
