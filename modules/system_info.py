@@ -1,22 +1,22 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 
-
-# import psutil
-# import platform
-# import time # Có thể không cần nếu dùng root_app.after()
+import psutil
+import platform
+import time
 
 class SystemInfoModule:
     def __init__(self, parent_notebook, root_app):
         self.parent_notebook = parent_notebook
-        self.root_app = root_app  # Tham chiếu đến cửa sổ gốc để dùng after()
+        self.root_app = root_app
         self.frame = ttk.Frame(parent_notebook)
         self.create_widgets()
 
     def create_widgets(self):
         # Khởi tạo các widget cho tab "Thông tin hệ thống"
         # Ví dụ: self.system_tree, self.cpu_progress, self.cpu_label, v.v.
-        pass  # Placeholder for widget creation logic
+
+        pass
 
     def update_info(self):
         """Cập nhật thông tin hệ thống và tài nguyên."""

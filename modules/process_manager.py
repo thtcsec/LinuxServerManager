@@ -1,19 +1,19 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
-# import psutil
-# import threading
+import psutil
+import threading
 
 class ProcessManagerModule:
     def __init__(self, parent_notebook):
         self.parent_notebook = parent_notebook
         self.frame = ttk.Frame(parent_notebook)
         self.create_widgets()
-        # self.refresh_processes() # Có thể gọi lần đầu tại đây
+        self.refresh_processes()
 
     def create_widgets(self):
         # Khởi tạo các widget cho tab "Quản lý tiến trình"
         # Ví dụ: nút "Làm mới", "Kết thúc tiến trình", self.process_tree
-        pass # Placeholder for widget creation logic
+        pass
 
     def refresh_processes(self):
         """Tải lại danh sách tiến trình."""
