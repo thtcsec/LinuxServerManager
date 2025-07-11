@@ -6,9 +6,9 @@ from tkinter import ttk, messagebox
 from modules.system_info_module import SystemInfoModule
 from modules.process_manager_module import ProcessManagerModule
 from modules.network_monitor_module import NetworkMonitorModule
-from modules.file_browser_module import FileBrowserModule
-from modules.log_viewer_module import LogViewerModule
-from modules.command_executor_module import CommandExecutorModule
+from modules.file_browser import FileBrowserModule
+from modules.log_viewer import LogViewerModule
+from modules.command_executor import CommandExecutorModule
 
 
 class LinuxServerManager:
