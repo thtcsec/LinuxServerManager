@@ -43,7 +43,7 @@ class NetworkMonitor:
         try:
             addrs = psutil.net_if_addrs()
             stats = psutil.net_io_counters(pernic=True)
-            content = "--- THÔNG TIN CÁC GIAO DIỆN MẠNG ---\n\n"
+            content = "--- NETWORK INTERFACES INFO ---\n\n"
 
             for name, addresses in addrs.items():
                 content += f"Giao diện: {name}\n"
