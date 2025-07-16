@@ -7,11 +7,31 @@ Nhóm thực hiện: Nhóm 21
 Trịnh Hoàng Tú – 23DH113972
 
 Trần Minh Thiện – 23DH113375
-##  Cài đặt
+## ⚙️ Cài đặt
 
-Để cài đặt và chạy ứng dụng Linux Server Manager, cần có môi trường Linux với Python 3 đã được cài đặt.
+Để cài đặt và chạy ứng dụng Linux Server Manager, bạn cần có:
 
-1.  **Clone Repository:**
+- Môi trường hệ điều hành Linux
+- Python >= 3.6
+- `pip` (trình quản lý gói Python)
+
+### 🔽 Bước 1: Cài đặt Python (nếu chưa có)
+
+#### 📦 Trên Debian/Ubuntu:
+```bash
+sudo apt update
+sudo apt install python3 python3-pip
+```
+#### 📦 Trên Fedora:
+```bash
+sudo dnf install python3 python3-pip
+```
+### 📌 Kiểm tra phiên bản sau khi cài:
+```bash
+python3 --version
+pip3 --version
+```
+### Bước 2: **Clone Repository:**
     Mở Terminal và clone dự án về máy:
 
     ```bash
