@@ -7,7 +7,6 @@ import threading
 
 from modules.file_browser import human_readable
 
-
 class NetworkMonitor:
     def __init__(self, parent_notebook):
         self.parent_notebook = parent_notebook

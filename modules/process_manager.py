@@ -4,6 +4,7 @@ from tkinter import ttk, messagebox
 
 class ProcessManager:
     def __init__(self, parent_notebook):
+        self.tree = None
         self.frame = ttk.Frame(parent_notebook)
         self.create_widgets()
         self.refresh_processes()
@@ -40,7 +41,7 @@ class ProcessManager:
         self.tree.delete(*self.tree.get_children())
         for proc in psutil.process_iter(['pid', 'name', 'status', 'cpu_percent', 'memory_percent']):
             try:
-                # Lấy thông tin, làm tròn số cho dễ nhìn
+                # Lấy thông tin và làm tròn số
                 pid = proc.info['pid']
                 name = proc.info['name']
                 status = proc.info['status']
@@ -63,7 +64,8 @@ class ProcessManager:
         if messagebox.askyesno("Xác nhận", f"Bạn có chắc chắn muốn kết thúc tiến trình '{name}' (PID: {pid})?"):
             try:
                 p = psutil.Process(pid)
-                p.terminate() # Hoặc p.kill() nếu muốn mạnh hơn
+                p.terminate()
+                #p.kill() sẽ mạnh honw
                 messagebox.showinfo("Thành công", f"Đã gửi yêu cầu kết thúc tiến trình '{name}'.")
                 self.refresh_processes()
             except psutil.NoSuchProcess:

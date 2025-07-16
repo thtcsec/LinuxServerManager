@@ -6,7 +6,7 @@ import platform
 import time
 
 def human_readable(size, decimal_places=1):
-    """Chuyển đổi byte -> dạng KB/MB/GB… dễ đọc."""
+    """Chuyển đổi byte -> dạng KB/MB/GB…"""
     for unit in ['B', 'KB', 'MB', 'GB', 'TB']:
         if size < 1024:
             return f"{size:.{decimal_places}f} {unit}"
@@ -51,6 +51,8 @@ class SystemDataUtility:
 
 class SystemInfo:
     def __init__(self, parent_notebook, root_app):
+        self.cpu_progress = None
+        self.system_tree = None
         self.parent_notebook = parent_notebook
         self.root_app = root_app # Cần root_app để dùng phương thức 'after'
         self.frame = ttk.Frame(parent_notebook)
@@ -116,7 +118,7 @@ class SystemInfo:
             messagebox.showerror("Lỗi", f"Không thể cập nhật thông tin hệ thống: {str(e)}")
 
     def update_dynamic_info(self):
-        """Cập nhật các thông tin động như CPU, RAM..."""
+        """Cập nhật các thông tin CPU, RAM và Disk"""
         try:
             # CPU
             cpu_percent = self.data_utility.get_cpu_usage()
@@ -134,7 +136,6 @@ class SystemInfo:
             self.disk_label.config(text=f"{disk_info['percent']}% ({human_readable(disk_info['used'])} / {human_readable(disk_info['total'])})")
 
         except Exception as e:
-            # Có thể log lỗi ra console thay vì hiển thị messagebox liên tục
             print(f"Lỗi cập nhật tài nguyên: {e}")
 
     def start_periodic_update(self):

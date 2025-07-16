@@ -64,11 +64,11 @@ class LinuxServerManager:
         help_menu.add_command(label="Về ứng dụng", command=self.show_about)
 
     def refresh_all_modules(self):
-        self.system_info.update_info()
+        self.system_info.update_dynamic_info()
         self.process_manager.refresh_processes()
         self.network_monitor.refresh_network()
         self.file_browser.refresh_files()
-        self.log_viewer.refresh_log()
+        #self.log_viewer.refresh_log() không có
         messagebox.showinfo("Làm mới", "Đã làm mới dữ liệu của tất cả các tab.")
 
     def show_help(self):
